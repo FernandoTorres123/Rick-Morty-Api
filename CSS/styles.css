@@ -1,0 +1,86 @@
+
+body{
+    background: linear-gradient( 360deg,rgba(0,0,8, .7), rgba(70, 173, 26, 0.578) );
+}
+
+header .container1 {
+    padding: 20px 30px ;
+    background: linear-gradient( 180deg,rgba(0,0,8, .7), rgba(97, 239, 36, 0.578) );
+    transition: 800ms ease-out all;
+}
+
+/* #logo{
+    background: linear-gradient( 180deg,rgba(0,0,8, .7), rgba(97, 239, 36, 0.578) );
+} */
+
+#navbarButton{
+    background: linear-gradient( 180deg,rgba(0,0,8, .7), rgba(97, 239, 36, 0.578) );
+}
+
+header .container1:hover{
+    background: black;
+}
+
+.navbar-color {
+    color: rgb(97, 239, 36);
+}
+
+.navbar-button-color {
+    color: white;
+    background: linear-gradient( 180deg,rgba(0,0,8, .7), rgba(97, 239, 36, 0.578) );
+    border-color: rgb(97, 239, 36);
+}
+
+.navbar-button-color:hover {
+    background-color: rgb(97, 239, 36);
+}
+
+.divider {
+    border-color: white;
+}
+
+.drop {
+    border-color: white;
+    background-color: black;
+}
+
+/* #resultado div{
+    background-color: rgb(116, 116, 116);
+} */
+
+.card {
+    background: linear-gradient( 180deg, rgba(97, 239, 36, 0.578),rgba(0,0,8, .7) );
+    color: white;
+    scroll-behavior: smooth;
+    transition: 500ms ease-out all;
+
+}
+
+.card:hover{
+    transform: scale(1.03);
+    transform-origin: center;
+    overflow: visible;
+}
+
+#resultado{
+    margin-right: 0px;
+    margin-left: 5px;
+}
+
+.image img{
+    object-fit: cover;
+    width: 100%;
+    /* margin-bottom: 20px; */
+    border-radius: 4px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.prevnextButtons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-color{
+    color: rgb(97, 239, 36);
+}
