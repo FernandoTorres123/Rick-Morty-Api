@@ -29,7 +29,7 @@ const renderLocations = (locations) => {
     lugares.forEach((location) => {
         /*Cada personaje*/
         let div = document.createElement("div");
-        div.classList.add("col-3", "mt-3");
+        div.classList.add("col-3", "mt-3", "divCard");
         div.innerHTML += `<div class="card" data-id="${location.id}">
             <div class="card-content">
                 <p>${location.id}.-<b>${location.name}</b></p>
@@ -44,15 +44,18 @@ const renderLocations = (locations) => {
 
         document.querySelector("#prev").innerHTML = "";
         document.querySelector("#prev1").innerHTML = "";
+        document.querySelector("#prev2").innerHTML = "";
 
         let div = document.createElement('div');
         div.innerHTML += `
-    <a id='prev' class="button-color nav-link" aria-current="page" href="#">Anterior</a>
+        <button id="prev" class="navbar-button-color btn btn-outline-success mt-3 ms-4"
+        type="submit">Anterior</button>
     `;
         document.querySelector("#prev1").append(div);
     } else {
         document.querySelector("#prev1").innerHTML = "";
         document.querySelector("#prev").innerHTML = "";
+        document.querySelector("#prev2").innerHTML = "";
     }
 
     if (info.next != null) {
@@ -61,14 +64,18 @@ const renderLocations = (locations) => {
 
         document.querySelector("#next").innerHTML = "";
         document.querySelector("#next1").innerHTML = "";
+        document.querySelector("#next2").innerHTML = "";
 
         let div = document.createElement('div');
         div.innerHTML += `
-    <a id='next' class="button-color nav-link" aria-current="page" href="#">Siguiente</a>
+        <button id="next" class="navbar-button-color btn btn-outline-success mt-3 me-4"
+        type="submit">Siguiente</button>
     `;
         document.querySelector("#next1").append(div);
     } else {
+        document.querySelector("#next").innerHTML = "";
         document.querySelector("#next1").innerHTML = "";
+        document.querySelector("#next2").innerHTML = "";
 
     }
 

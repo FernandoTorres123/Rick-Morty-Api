@@ -34,16 +34,18 @@ const renderCharacters = (personajes) => {
     characters.forEach((personaje) => {
         /*Cada personaje*/
         let div = document.createElement("div");
-        div.classList.add("col-3", "pt-2", "pl-2");
-        div.innerHTML += `<div class="card" data-id="${personaje.id}">
-            <div class="card-image" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        div.classList.add("col-4", "pt-2", "ps-2", "divCard", "mb-3");
+        div.innerHTML += `<div class="card rounded-4" data-id="${personaje.id}">
+            <div class="card-image-top" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <figure class="image">
                     <img src="${personaje.image}" alt="Placeholder image">
                 </figure>
             </div>
-            <div class="card-content">
-                <p>${personaje.id}.-<b>${personaje.name}</b></p>
-                <p>Estatus: <b>${personaje.status}</b> Especie: <b>${personaje.species}</b></p>
+            <div class="card-body">
+                <p class= "card-tittle">${personaje.id}.-<b>${personaje.name}</b></p>
+                <div class= "card-text">
+                    <p class="fs-6">Estatus: <b>${personaje.status}</b> Especie: <b>${personaje.species}</b></p>
+                </div>
             </div>
         </div>`;
 
@@ -81,30 +83,36 @@ const renderCharacters = (personajes) => {
 
         document.querySelector("#prev").innerHTML = "";
         document.querySelector("#prev1").innerHTML = "";
+        document.querySelector("#prev2").innerHTML = "";
 
         let div = document.createElement('div');
         div.innerHTML += `
-    <button id="prev" class="navbar-button-color btn btn-outline-success"
+            <button id="prev" class="navbar-button-color btn btn-outline-success mt-3 ms-4"
                             type="submit">Anterior</button>
     `;
         document.querySelector("#prev").append(div);
     } else {
         document.querySelector("#prev").innerHTML = "";
+        document.querySelector("#prev1").innerHTML = "";
+        document.querySelector("#prev2").innerHTML = "";
     }
 
     if (info.next != null) {
 
         document.querySelector("#next").innerHTML = "";
         document.querySelector("#next1").innerHTML = "";
+        document.querySelector("#next2").innerHTML = "";
 
         let div = document.createElement('div');
         div.innerHTML += `
-    <button id="next" class="navbar-button-color btn btn-outline-success"
+            <button id="next" class="navbar-button-color btn btn-outline-success mt-3 me-4"
                             type="submit">Siguiente</button>
     `;
         document.querySelector("#next").append(div);
     } else {
         document.querySelector("#next").innerHTML = "";
+        document.querySelector("#next1").innerHTML = "";
+        document.querySelector("#next2").innerHTML = "";
 
     }
 
